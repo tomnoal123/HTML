@@ -15,6 +15,16 @@ form.addEventListener("submit", function(e){
         alert('Niepoprawne dane');
         return;
     }
+    if(checkBox.checked){
+    const RememberUserData = {
+        username: inputUsername.value,
+        password: inputPassword.value
+    }
+    
+    localStorage.setItem("RememberUserData", JSON.stringify(RememberUserData));
+    };
+   window.location.href = "todoapp.html";
+})
 
-    window.location.href = "todoapp.html";
-});
+    
+
