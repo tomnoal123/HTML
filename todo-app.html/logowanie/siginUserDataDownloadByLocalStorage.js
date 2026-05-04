@@ -6,7 +6,7 @@ const checkbox = document.getElementById('checkbox');
 
 
 
-//USERINFO//
+
 function userInfo (){
 const userData = [];
 const inputs = document.querySelectorAll('input');
@@ -19,7 +19,7 @@ inputs.forEach((input) =>{
     localStorage.setItem("userData", JSON.stringify(userData));
     return userData;
 };
-//USERINFO//
+
 
 
 
