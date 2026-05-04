@@ -1,0 +1,196 @@
+:root{
+    --primary:white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-size: cover;
+    background-image: url(main-photo-background.jpg);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CONTAINER */
+.container{
+    width: 800px;
+    height: 600px;
+    border: 3px solid var(--primary);
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.40);
+    display: flex;
+    overflow: hidden;
+}
+
+/* LEFT & RIGHT BOX */
+#return-box,
+#box{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+/* LEFT PANEL */
+#return-box{
+    border-right: 3px solid var(--primary);
+    background-color: var(--primary);
+    position: relative;
+    overflow: hidden;
+}
+
+/* KOŁO W TLE */
+#return-box::before{
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(80, 12, 94, 0.2);
+    border-radius: 50%;
+    top: -150px;
+    left: -150px;
+    z-index: 0;
+}
+
+/* CONTENT LEFT */
+.return-box{
+    z-index: 1;
+    color: rgb(72, 19, 122);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* BACK LINK */
+.back{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    text-decoration: none;
+    color: rgb(72, 19, 122);
+    font-weight: 500;
+}
+
+/* RIGHT PANEL */
+#box{
+    background-color: transparent;
+    backdrop-filter: blur(30px);
+    text-align: center;
+    color: white;
+}
+
+/* REGISTER BOX */
+#Register-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* INPUTS */
+.username-box,
+.password-box{
+    position: relative;
+}
+
+#username-input,
+#password-input,
+#repeat-password-input{
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--primary);
+    outline: none;
+    color: white;
+}
+
+/* LABELS */
+.username-box label,
+.password-box label{
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+/* ANIMATION LABEL */
+.username-box input:focus ~ label,
+.password-box input:focus ~ label,
+.password-box input:valid ~ label{
+    top: -8px;
+    font-size: 0.8rem;
+}
+
+/* CHECKBOX */
+.checkbox-box{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    margin-top: 10px;
+}
+
+/* BUTTON WRAPPER */
+.Signup-box{
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+/* SIGN BUTTON */
+.sign-button{
+    padding: 30px 85px;
+    font-size: 25px;
+    border-radius: 15px;
+    border: none;
+    font-weight: bold;
+    background-color: var(--primary);
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sign-button:hover{
+    transform: scale(1.05);
+    background-color: rgb(80, 12, 94);
+    color: rgb(30, 169, 224);
+}
+
+/* RETURN BUTTON */
+.return-button{
+    padding: 15px 20px;
+    font-size: 15px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(107, 6, 107);
+    color: var(--primary);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.return-button:hover{
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+/* BACK BUTTON STYLE */
+.back{
+    text-decoration: none;
+    color: inherit;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
