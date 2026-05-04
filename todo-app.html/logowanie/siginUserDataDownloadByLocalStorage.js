@@ -8,7 +8,7 @@ const checkbox = document.getElementById('checkbox');
 
 
 function userInfo (){
-const userData = [];
+const userData = {};
 const inputs = document.querySelectorAll('input');
 
 
