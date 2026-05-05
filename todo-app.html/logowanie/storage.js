@@ -1,6 +1,5 @@
 export function getUserData() {
-    return 
-    JSON.parse(localStorage.getItem("userData")) || {
+    return JSON.parse(localStorage.getItem("userData")) || {
         username: '',
         password: ''
     };
