@@ -1,4 +1,4 @@
-import { getUserData } from './siginUserDataDownloadByLocalStorage.js';
+import { getUserData } from "./storage.js";
 
 const form = document.getElementById('main-login-form');
 const inputUsername = document.getElementById('input-username');
@@ -16,12 +16,11 @@ form.addEventListener("submit", function(e){
         return;
     }
     if(checkBox.checked){
-    const RememberUserData = {
+    
+    localStorage.setItem("RememberUserData", JSON.stringify({
         username: inputUsername.value,
         password: inputPassword.value
-    }
-    
-    localStorage.setItem("RememberUserData", JSON.stringify(RememberUserData));
+    }));
     };
    window.location.href = "todoapp.html";
 })
