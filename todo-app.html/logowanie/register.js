@@ -21,8 +21,8 @@ form.addEventListener("submit", function(f){
     }
    
         const userData = {
-            username: document.getElementById('input-username').value,
-            password: document.password.value
+            username: document.getElementById('username-input').value,
+            password: password.value
         };
         setUserData(userData);
         
