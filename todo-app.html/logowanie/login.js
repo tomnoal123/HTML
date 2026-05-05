@@ -1,6 +1,7 @@
 import { getUserData } from "./storage.js";
 
 const form = document.getElementById('main-login-form');
+if (form){
 const inputUsername = document.getElementById('input-username');
 const inputPassword = document.getElementById('input-password');
 const checkBox = document.getElementById('login-checkbox');
@@ -24,6 +25,9 @@ form.addEventListener("submit", function(e){
     };
    window.location.href = "todoapp.html";
 })
+}
+    
+
 
     
 
