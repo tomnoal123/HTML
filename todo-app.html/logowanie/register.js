@@ -1,4 +1,5 @@
 
+
 import { setUserData } from "./storage.js";
 const form = document.getElementById('user-data-form');
 const checkbox = document.getElementById('checkbox');
@@ -26,8 +27,13 @@ form.addEventListener("submit", function(f){
         };
         setUserData(userData);
         
-        alert("Rejestracja zakończona. Proszę się zalogować")
+        alert("Rejestracja zakończona. Proszę się zalogować");
+        return;
 });
+
+
+
+
 
 
 
