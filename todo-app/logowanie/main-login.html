@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style/main-login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logowanie</title>
+</head>
+<body>
+    
+        <section class="box">
+            <form id="main-login-form">
+                <h1 class="title-login">Login</h1>
+                            <!--LOGOWANIE UŻYTKOWNIKA-->
+                            <div class="input-box">
+                                <input  id="input-username" name="username"   type="text" required>
+                                <label for="input-username">Username</label>
+                            </div>
+
+                            <div class="input-box">
+                                <input id="input-password"  type="password" required>
+                                <label for="input-password">Password</label>
+                            </div>
+                            <div class="checkboxforgotpassoword">
+                                <div class="checkbox">
+                                    <input id="login-checkbox" name="password" type="checkbox">
+                                    <p>Remember Me</p>
+                                </div>
+                                
+                                <p><a href="#">Forget Password</a></p>
+
+                            </div>
+
+                            <button id="login-button" class="login-button">Log in</button>
+                            <div class="register">
+                            <p>Don't have an account? <a href="signin-form.html">Register</a></p>
+                            </div>
+            </form>
+        </section>
+        <script type="module" src="../js/login.js"></script>
+</body>
+</html>
