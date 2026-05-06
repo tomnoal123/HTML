@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        :root {
+    --bg-body: rgb(7, 7, 43);
+    --bg-container: rgb(21, 21, 139);
+    --btn-bg: rgb(29, 107, 224);
+    --text-color: white;
+
+    --radius-main: 30px;
+    --radius-btn: 10px;
+
+    --font-h1: 4em;
+    --font-label: 2em;
+    --font-input: 1.5em;
+
+    --dice-size: 80px;
+}
+
+body {
+    background-color: var(--bg-body);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 500px;
+    flex-direction: column;
+    background-color: var(--bg-container);
+    border-radius: var(--radius-main);
+    color: var(--text-color);
+    padding-bottom: 50px;
+}
+
+h1 {
+    flex: 1;
+    font-size: var(--font-h1);
+}
+
+#box label {
+    font-size: var(--font-label);
+    margin-right: 15px;
+    vertical-align: center;
+    font-weight: bold;
+}
+
+#dice-button {
+    background-color: var(--btn-bg);
+    color: var(--text-color);
+    border: none;
+    font-size: var(--font-input);
+    padding: 10px 20px;
+    border-radius: var(--radius-btn);
+    margin-left: 15px;
+}
+
+#input-dice {
+    font-size: var(--font-input);
+    width: 120px;
+    height: 40px;
+}
+
+#imgResult img {
+    width: var(--dice-size);
+    height: var(--dice-size);
+    object-fit: contain;
+    margin: 5px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#imgResult img:hover {
+    transform: rotate(10deg) scale(1.1);
+    cursor: pointer;
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller </title>
+</head>
+<body>
+    <section id="container">
+        <h1>Dice Roller</h1>
+        <div id="box">
+            <label for="input-dice"># of dice</label>
+            <input type="number" id="input-dice" value="1" min="1" max="6">
+            <button id="dice-button">Roll dice</button>
+            <div id="imgResult"></div>
+        </div>
+        
+    </section>
+    <script>
+    const button = document.getElementById('dice-button');
+    const result = document.getElementById('imgResult');
+
+    button.addEventListener("click", function(){
+        const input = document.getElementById('input-dice').value;
+        let images = [];
+
+        result.innerHTML = "<span style='font-size: 2.5em;'>🎲 Rolling...</span>";
+
+        setTimeout(() => {
+        for(let i = 0; i < input; i++){
+            const value = Math.floor(Math.random() * 6) + 1;
+            images.push(`<img src="kosci/${value}.png">`);
+        }
+        result.innerHTML = images.join('');
+    }, 400);
+});
+</script>
+</body>
+</html>
