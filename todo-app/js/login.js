@@ -6,7 +6,14 @@ if (form) {
     const inputUsername = document.getElementById('input-username');
     const inputPassword = document.getElementById('input-password');
     const checkBox = document.getElementById('login-checkbox');
+        window.addEventListener("load", () => {
+        const saved = JSON.parse(localStorage.getItem("RememberUserData"));
 
+        if (saved) {
+            inputUsername.value = saved.username;
+            checkBox.checked = true;
+        }
+    });
     form.addEventListener("submit", function (e) {
         e.preventDefault();
 
