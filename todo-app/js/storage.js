@@ -1,9 +1,12 @@
 export function getUserData() {
-    return JSON.parse(localStorage.getItem("userData")) || {
-        username: '',
-        password: ''
-    };
+    const data = JSON.parse(localStorage.getItem("userData"));
+    return Array.isArray(data) ? data : [];
 }
 export function setUserData(data){
-    localStorage.setItem("userData", JSON.stringify(data));
+
+    const users = getUserData();
+
+    users.push(data);
+
+    localStorage.setItem("userData", JSON.stringify(users));
 }
