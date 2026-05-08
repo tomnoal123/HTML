@@ -10,8 +10,8 @@ form.addEventListener("submit", function(f){
         alert("Musisz zaakceptować regulamin");
         return;
     }
-    if (password.value.length < 10){
-        alert('Minimalna długość hasła to 10 znaków');
+    if (password.value.length < 8){
+        alert('Minimalna długość hasła to 8 znaków');
         return;
         
     }
