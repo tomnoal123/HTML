@@ -21,11 +21,13 @@ tasks.forEach((task, index) =>{
     btn.style.fontFamily = "Poppins, sans-serif";
     btn.style.borderRadius = "15px";
     btn.style.cursor = "pointer";
-    btn.addEventListener("mouseenter", () =>{
-        btn.style.opacity = "0.7";
-        btn.style.transform = "scale(1.05)";
-    btn.addEventListener("mouseleave", () => {
-    btn.style.backgroundColor = "red";
+btn.addEventListener("mouseenter", () => {
+    btn.style.opacity = "0.7";
+    btn.style.transform = "scale(1.05)";
+});
+
+btn.addEventListener("mouseleave", () => {
+    btn.style.opacity = "1";
     btn.style.transform = "scale(1)";
 });
     })
