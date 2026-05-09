@@ -7,9 +7,9 @@ if (tasks.length === 0) {
 }else{
 tasks.forEach((task, index) =>{
     const li = document.createElement("li");
-    li.textContent = task;
-    list.appendChild(li);
+    li.textContent = task;
     li.textContent = `${index + 1}. ${task}`;
+    list.appendChild(li);
     const btn = document.createElement("button");
     btn.style.marginLeft = "20px";
     btn.style.backgroundColor = "red";
