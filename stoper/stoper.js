@@ -1,6 +1,6 @@
 const display = document.getElementById('display');
 const start = document.getElementById('start');
-const stoped = document.getElementById('stopped');
+const stopped = document.getElementById('stopped');
 const reset = document.getElementById('reset');
 
 let timer = null;
