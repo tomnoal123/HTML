@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(179, 176, 176);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            gap: 50px;
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(39, 37, 37);
+            font-size: 5rem;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 300px;
+            padding: 10px 20px;
+            width: 500px;
+            border: 4px black;
+            border-style: solid;
+            border-radius: 15px;
+            gap: 40px;
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            background-color: grey;
+        }
+        #display{
+            font-size: 4.5rem;
+            font-family: monospace;
+        }
+        .button-box{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            gap: 40px;
+        }
+        .button-box button{
+            padding: 10px 20px;
+            font-size: 1.3rem;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            font-weight: bold;
+            letter-spacing: 1.4px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #start{
+            background-color: rgb(224, 29, 29);
+            cursor: pointer;
+        }
+        #stoped{
+            background-color: rgb(17, 194, 17);
+            cursor: pointer;
+        }
+        #reset{
+            background-color: rgb(25, 148, 148);
+            cursor: pointer;
+        }
+        #start:hover{
+            background-color: rgb(160, 19, 19);
+        }
+        #stoped:hover{
+            background-color: rgb(4, 153, 4);
+        }
+        #reset:hover{
+            background-color: rgb(12, 92, 92);
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stoper</title>
+</head>
+<body>
+    <h1 >STOPWATCH</h1>
+            <div class="container">
+                <div id="display">00:00:00:00</div>
+
+                <div class="button-box">
+                    <button id="start">START</button>
+                    <button id="stoped">STOP</button>
+                    <button id="reset">RESET</button>
+                </div>
+        
+            </div> 
+    <script src="stoper.js"></script>
+</body>
+</html>
