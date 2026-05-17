@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        :root{
+            --primary: rgb(30, 37, 143);
+            --secondary: rgb(72, 159, 209);
+        }
+        .button{
+            background-color: var(--primary);
+            color: var(--secondary);
+            
+        }
+        .is-toggled{
+            background-color: var(--secondary);
+            color: var(--primary);
+            box-shadow: 2px 2px 12px rgb(72, 159, 209, 0.60);
+        }
+        .button,
+        .is-toggled{
+            border-radius: 7px;
+            height: 50px;
+            width: 175px;
+            padding: 1px 1px;
+            border-style: solid;
+            border: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: transform 300ms;
+            position: relative;
+            letter-spacing: 1.5px;
+            
+               
+        }
+        .button:hover,
+        .is-toggled:hover{
+            transform: scale(1.1);
+        }
+        
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 100px;
+            justify-content: flex-start;
+            background-color: rgb(33, 7, 68);
+            border: 3px solid blue ;
+            padding: 20px 40px;
+            border-radius: 10px;
+            
+        }
+        .search-bar{
+            background-color: var(--primary);
+            border: none;
+            border-radius: 10px;
+            padding-left: 20px;
+            height: 60px;
+            width: 500px;
+            caret-color: white;
+             text-indent: 10px;
+             color: white;
+             font-size: 18px;
+         }
+         .search-bar:focus {
+        outline: none;
+         }
+         .search-bar::placeholder{
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.644);
+            letter-spacing: 1.5px;
+            font-weight: 600;
+         }
+        body{
+            background-color: rgb(4, 4, 24);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList</title>
+</head>
+<body>
+    <section class="container">
+    <button id="btn1" class="button" >Home</button>
+    <button id="btn2" class="button" >Lessons</button>
+    <button id="btn3" class="button" >Gaming</button>
+    <input  type="text" placeholder="Search" class="search-bar">
+    </section>
+    <script>
+        const firstBtn = document.getElementById("btn1");
+        const secondBtn = document.getElementById("btn2");
+        const thirdBtn = document.getElementById("btn3");
+
+        const buttons = [firstBtn, secondBtn, thirdBtn];
+
+        firstBtn.addEventListener("click", () => toggle(firstBtn));
+        secondBtn.addEventListener("click", () => toggle(secondBtn));
+        thirdBtn.addEventListener("click", () => toggle(thirdBtn));
+
+        function toggle(clickedBtn) {
+        const isActive = clickedBtn.classList.contains("is-toggled");
+
+    
+        buttons.forEach(btn => btn.classList.remove("is-toggled"));
+
+    
+        if (!isActive) {
+        clickedBtn.classList.add("is-toggled");
+        }
+    }
+        
+    </script>
+</body>
+</html>
